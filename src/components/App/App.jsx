@@ -7,9 +7,14 @@ import { GlobalStyle } from "../GlobalStule/GlobalStyle";
 import { Wrapper } from "./App.styled";
 import { Loader } from '../Loader/Loader';
 
-const HomePage = lazy(() => import('../pages/HomePage'));
-const MoviesPage = lazy(() => import('../pages/MoviesPage'));
-const MovieDetailsPage = lazy(() => import('../pages/MovieDetailsPage'));
+const loader = (componentName) =>{
+  return lazy(() => import(`../pages/${componentName}`));
+};
+
+const HomePage = loader('HomePage');
+const MoviesPage = loader('MoviesPage');
+const MovieDetailsPage = loader('MovieDetailsPage');
+
 
 export const App = () => {
   return (

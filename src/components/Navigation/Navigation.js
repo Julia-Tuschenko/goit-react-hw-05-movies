@@ -10,6 +10,7 @@ function Navigation() {
             </Nav>
             <Toaster />
         </header>
+
  )   
 }
 

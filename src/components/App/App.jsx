@@ -5,6 +5,7 @@ import Cast from "../Carts/Carts";
 import Review from "../Review/Review";
 import { GlobalStyle } from "../GlobalStule/GlobalStyle";
 import { Wrapper } from "./App.styled";
+import { Loader } from '../Loader/Loader';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const MoviesPage = lazy(() => import('../pages/MoviesPage'));
@@ -12,7 +13,7 @@ const MovieDetailsPage = lazy(() => import('../pages/MovieDetailsPage'));
 
 export const App = () => {
   return (
-    <Suspense fallback={''}>
+    <Suspense fallback={<Loader/>}>
     <Wrapper>
       <GlobalStyle/>
       <Navigation />

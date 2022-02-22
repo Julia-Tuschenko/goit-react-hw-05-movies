@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Form, Input, BtnForm } from "../GlobalStule/Pages.styled";
-import { getMoviesByQuery } from "../services/moviesApi";
-import  SearchList  from "../SearchList/SearchList";
+import { Form, Input, BtnForm } from "./GlobalStule/Pages.styled";
+import { getMoviesByQuery } from "./services/moviesApi";
+import  SearchList  from "./SearchList/SearchList";
 
 
 function MoviesPage() {

@@ -3,7 +3,7 @@ import { useParams, useLocation, Link } from 'react-router-dom';
 import { getMovieCredits } from "../services/moviesApi";
 import { List, Item, Img, Title, BtnControls } from "../GlobalStule/Pages.styled";
 
-const Cast = () => {
+const Carts = () => {
     const imgUrl = 'https://image.tmdb.org/t/p/w300';
     const [actors, setActors] = useState([]);
     const location = useLocation();
@@ -41,4 +41,4 @@ const Cast = () => {
 
 };
 
-export default Cast;
+export default Carts;

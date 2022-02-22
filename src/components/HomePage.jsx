@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getTrendingMovies } from "../services/moviesApi";
-import { List, Item, Img, Title } from "../GlobalStule/Pages.styled";
+import { getTrendingMovies } from "./services/moviesApi";
+import { List, Item, Img, Title } from "./GlobalStule/Pages.styled";
 
 function HomePage() {
     const [moviesList, setMoviesList] = useState([]);
@@ -30,7 +30,5 @@ function HomePage() {
         </List>
         </main>
     )
-
 };
-
 export default HomePage;

@@ -1,19 +1,23 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Navigation from "../Navigation/Navigation";
-import Cast from "../Carts/Carts";
-import Review from "../Review/Review";
+// import Cast from "../Carts/Carts";
+// import Review from "../Review/Review";
 import { GlobalStyle } from "../GlobalStule/GlobalStyle";
 import { Wrapper } from "./App.styled";
 import { Loader } from '../Loader/Loader';
 
 const loader = (componentName) =>{
-  return lazy(() => import(`../pages/${componentName}`));
+  return lazy(() => import(`../${componentName}`));
 };
 
 const HomePage = loader('HomePage');
 const MoviesPage = loader('MoviesPage');
 const MovieDetailsPage = loader('MovieDetailsPage');
+
+const Carts = lazy(() => import(`../Carts/Carts`));
+
+const Review  = lazy(() => import(`../Review/Review`));
 
 
 export const App = () => {
@@ -26,7 +30,7 @@ export const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
           <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
-            <Route path="cast" element={<Cast />} />
+            <Route path="cast" element={<Carts />} />
             <Route path="reviews" element={<Review />} />
           </Route>
           <Route path="*" element={<Navigate to="/" />} />

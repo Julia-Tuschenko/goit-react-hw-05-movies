@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, NavLink, Outlet, Link, useLocation, } from 'react-router-dom';
-import { getMovieDetails } from "../services/moviesApi";
-import MovieDescription from "../MovieDescription/MovieDescription";
-import { BtnControls } from "../GlobalStule/Pages.styled";
+import { getMovieDetails } from "./services/moviesApi";
+import MovieDescription from "./MovieDescription/MovieDescription";
+import { BtnControls } from "./GlobalStule/Pages.styled";
 
 const MovieDetailsPage = () => {
 
